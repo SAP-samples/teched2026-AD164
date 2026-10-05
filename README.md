@@ -9,7 +9,7 @@ The [Reuse Tool](https://reuse.software/) must be used for your samples project.
 3. The README.md file (this file):
 Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
 
-# Session ID - Generate agentic workflows using SAP-managed n8n in Joule Studio
+# Session AD164 - Generate agentic workflows using SAP-managed n8n in Joule Studio
 
 ## Description
 
