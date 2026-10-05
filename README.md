@@ -17,23 +17,28 @@ This repository contains the material for the SAP TechEd 2026 session called Ses
 
 ## Overview
 
-This session introduces attendees to...
+This session introduces attendees to building and deploying agentic workflows using SAP-managed n8n in Joule Studio.
+
+The scenario is based on a real-world accounts payable use case: an invoice with a payment block exists in SAP S/4HANA Cloud. An AI agent retrieves the invoice and analyses it in the context of the related purchase order, goods receipt, and supplier contract. The agent's findings are presented to an approver through Joule Chat, enabling a conversational experience to review the details and make an informed decision. When the approver approves the invoice, the payment block is automatically removed in SAP S/4HANA Cloud.
 
 ## Requirements
 
-The requirements to follow the exercises in this repository are...
+The requirements to follow the exercises in this repository are:
+
+- SAP Joule Studio
+- SAP S/4HANA Public Cloud
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
-
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - First Exercise Description](exercises/ex1/)
-    - [Exercise 1.1 - Exercise 1 Sub Exercise 1 Description](exercises/ex1#exercise-11-sub-exercise-1-description)
-    - [Exercise 1.2 - Exercise 1 Sub Exercise 2 Description](exercises/ex1#exercise-12-sub-exercise-2-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
-    - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
-    - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
+- [Exercise 1 - Create and Deploy a Custom Agent](exercises/ex1/)
+    - [Exercise 1.1 - Create a Custom Agent to Read Invoice and Related Documents](exercises/ex1#exercise-11-create-a-custom-agent)
+    - [Exercise 1.2 - Deploy and Test the Agent](exercises/ex1#exercise-12-deploy-and-test-the-agent)
+- [Exercise 2 - Create an Invoice Approval Workflow](exercises/ex2/)
+    - [Exercise 2.1 - Build the Workflow and Integrate the Agent](exercises/ex2#exercise-21-build-the-workflow)
+- [Exercise 3 - Test the Workflow with Joule Chat](exercises/ex3/)
+    - [Exercise 3.1 - Experience the Conversational Approval Flow](exercises/ex3#exercise-31-conversational-approval-flow)
+    - [Exercise 3.2 - Approve the Invoice and Verify Payment Block Removal](exercises/ex3#exercise-32-approve-and-verify)
 
   
 **OR** Link to the Tutorial Navigator for example...
