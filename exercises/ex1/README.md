@@ -12,7 +12,7 @@ After completing these steps you will have created and deployed an invoice appro
 2. You are now on the Joule Studio home screen with the Joule Chat interface.
 <br>![](images/Step2.png)
 
-3. In the left navigation, click on **Solutions** to open the Solutions section.A solutions consists of multiple assets, each asset represents a deployable entity. For eg: In this exercise A workflow, agent or mcp server are assets part of a solution. A solution can be shared,commit to a Github repository and transport another Joule studio tenant. It is also a deployable artifact in Joule studio.
+3. In the left navigation, click on **Solutions** to open the Solutions section.A solution consists of multiple assets, each asset represents a deployable entity. For eg: In this exercise A workflow, agent or mcp server are assets part of a solution. A solution can be shared, commit to a Github repository and transport to another Joule studio tenant. It is also a deployable artifact in Joule studio.
 <br>![](images/Step3.png)
 
 4. Click **New** to create a new solution.
