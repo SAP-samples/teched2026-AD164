@@ -1,6 +1,6 @@
 # Exercise 1 - Create an Invoice Approval Workflow
 
-In this exercise, you will use Joule Studio to create an agentic invoice approval workflow powered by SAP-managed n8n. You will define the workflow intent, refine requirements through a guided Q&A with the AI Webagent, generate the workflow specification and solution, and deploy it.
+In this exercise, you will use Joule Studio to create an agentic invoice approval workflow powered by SAP-managed n8n. You will define the intent, refine requirements through a guided Q&A with the AI Webagent, generate the workflow specification and solution, and deploy it.
 
 ## Exercise 1.1 - Build the Workflow, Deploy and Test
 
