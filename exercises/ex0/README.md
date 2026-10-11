@@ -11,5 +11,5 @@ SAP Business AI Platform provides agentic workflow capabilities and n8n is SAP a
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+Now that you have understood SAP Managed n8n and how SAP provides an intent based development experience in Joule Studio.
+Continue to - [Exercise 1 - Exercise 1 Generate agentic workflow solution](../ex1/README.md)
