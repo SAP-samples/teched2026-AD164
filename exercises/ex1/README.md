@@ -6,13 +6,13 @@ In this exercise, you will use Joule Studio to create an agentic invoice approva
 
 After completing these steps you will have created and deployed an invoice approval workflow that validates invoices, routes them for AP Clerk approval via email and Teams notifications, and logs the outcome.
 
-1. Open your browser and log on to Joule Studio.
+1. Open your browser and log on to Joule Studio using the credentials shared by your trainers.
 <br>![](images/Step1.png)
 
 2. You are now on the Joule Studio home screen with the Joule Chat interface.
 <br>![](images/Step2.png)
 
-3. In the left navigation, click on **Solutions** to open the Solutions section.
+3. In the left navigation, click on **Solutions** to open the Solutions section.A solutions consists of multiple assets, each asset represents a deployable entity. For eg: In this exercise A workflow, agent or mcp server are assets part of a solution. A solution can be shared,commit to a Github repository and transport another Joule studio tenant. It is also a deployable artifact in Joule studio.
 <br>![](images/Step3.png)
 
 4. Click **New** to create a new solution.
@@ -21,7 +21,7 @@ After completing these steps you will have created and deployed an invoice appro
 5. Select **n8n Workflow** as the workflow type for your new solution.
 <br>![](images/Step5.png)
 
-6. Copy and paste the intent statement below into the **Intent** field. Optionally provide a **Solution name** using your username. Click **Create**.
+6. Copy and paste the intent statement below into the **Intent** field. Optionally provide a **Solution name** using your username. Click **Create**. A intent could be a business requirement to solve a specific business problem and a user could express this in business language without having any technical terms. The Business intent is translated in product requirement and specification documents using SAP knowledge systems and Lean IX integrated to Joule studio tenant. A reviewed specification document is used to build a solution by the webagent using various technical artifacts as files.
     ```
     Please create a workflow. The workflow should...Receive Invoice data as input, do basic validation of each line item of the invoice. Submit the invoice for an approval to a AP clerk for approval. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice.
     ```
@@ -45,7 +45,7 @@ After completing these steps you will have created and deployed an invoice appro
 10. Select all remaining options and click **Submit Answer**.
 <br>![](images/Step10.png)
 
-11. Enter your **AP Clerk email ID** — use your own user email address.
+11. Enter your **AP Clerk email ID** — use your user email address so that you get an approval task in your workspace.
 <br>![](images/Step11.png)
 
 12. When asked what happens when the AP Clerk rejects an invoice, choose **Log only - record outcome and end**.
@@ -73,7 +73,7 @@ After completing these steps you will have created and deployed an invoice appro
 <br>![](images/Step19.png)
 <br>![](images/Step19_2.png)
 
-20. In the n8n workflow editor, delete the **Outlook** and **MS Teams** notification nodes.
+20. In the n8n workflow editor, delete the **Outlook** and **MS Teams** notification nodes. The Joule studio tenant has not integrated with a MS Teams or Outlook tenant, hence it is not possibel to use this functionality in this exercise.
 <br>![](images/Step20.png)
 
 21. This is the final workflow model ready for deployment.
