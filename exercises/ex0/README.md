@@ -1,10 +1,10 @@
-# Level 1 Heading
+# Level 1 Introduction to SAP Managed n8n and Intent based development.
 
-In this exercise, you will...
+In this exercise, you will learn how SAP provides n8n as a SAP managed solution through Joule studio,how it generates business solutions using Intent based development powered by SAP knowledge systems,Lean IX and Webagen.
 
-## Level 2 Heading
+## Level 2 SAP Managed n8n
 
-After completing these steps you will have....
+SAP Business AI Platform provides agentic workflow capabilities and n8n is SAP agentic workflow orchestration solution part of Joule studio.It leverages n8n as a modern agentic workflow solution, scalable and robust SAP infrastructure  and AI driven development using LLMs and SAP knowledge systems.
 
 1.	Click here.
 <br>![](/exercises/ex0/images/00_00_0010.png)
