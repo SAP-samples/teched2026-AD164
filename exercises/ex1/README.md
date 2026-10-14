@@ -2,9 +2,10 @@
 
 In this exercise, you will use Joule Studio to create an agentic invoice approval workflow powered by SAP-managed n8n. You will define the intent, refine requirements through a guided Q&A with the AI Webagent, generate the workflow specification and solution, and deploy it.
 
-## Exercise 1.1 - Build the Workflow, Deploy and Test
+## Exercise 1.1 - Build the Workflow
 
 After completing these steps you will have created and deployed an invoice approval workflow that validates invoices, routes them for AP Clerk approval via email and Teams notifications, and logs the outcome.
+
 
 1. Open your browser and log on to Joule Studio using the credentials shared by your trainers.
 <br>![](images/Step1.png)
@@ -79,20 +80,47 @@ After completing these steps you will have created and deployed an invoice appro
 21. This is the final workflow model ready for deployment.
 <br>![](images/Step21.png)
 
-22. Click the **Deploy** action and confirm by clicking the **Deploy** button in the confirmation dialog.
+
+
+## Exercise 1.2 - Deploy and Test the Workflow
+
+After completing these steps you will have deployed and tested an invoice approval workflow that validates invoices, routes them for AP Clerk approval via email and Teams notifications, and logs the outcome.
+
+1. Click the **Deploy** action and confirm by clicking the **Deploy** button in the confirmation dialog.
 <br>![](images/Step22.png)
 
-23. A toast message confirms that deployment has started. Click **View deployment history**.
+2. A toast message confirms that deployment has started. Click **View deployment history**.
 <br>![](images/Step23.png)
 
-24. Click **View logs** to monitor deployment progress.
+3. Click **View logs** to monitor deployment progress.
 <br>![](images/Step24.png)
 
-25. The log confirms a successful deployment of your invoice approval workflow.
+4. The log confirms a successful deployment of your invoice approval workflow.
 <br>![](images/Step25.png)
 
+5. Successful deployment shows the status in the Managed->Deployments Job History and Soltion status as Running
+<br>![](images/Step26.png)
+
+6. In the Try Deployed Solution section,select the Workflow for eg: invoice-approval-workflow. This will enable testing the workflow with required inputs. Generate test data using webagent by typing "Generate test data" or "provide input values for this workflow" etc.
+<br>![](images/Step27.png)
+
+7. Copy and paste the json structure from webagent to the text area and click the button.
+<br>![](images/Step28.png)
+
+8. Validation based on the input schema generated.
+<br>![](images/Step29.png)
+9. Enter confirm and click the action button.
+<br>![](images/Step30.png)
+10. Click Execute Workflow button.
+<br>![](images/Step31.png)
+11. Succesful execution, shows the message and a link to the monitoring.Click the link.
+<br>![](images/Step32.png)
+12. Monitoring shows the execution details. Select the workflow instance and it shows the exwecution history.
+<br>![](images/Step33.png)
+13. Go throgh the execution history.
+<br>![](images/Step34.png)
 ## Summary
 
-You have successfully created and deployed an invoice approval workflow in Joule Studio using SAP-managed n8n. The workflow validates incoming invoices, routes them for approval to an AP Clerk, and logs the outcome.
+You have successfully tested an invoice approval workflow in Joule Studio using SAP-managed n8n. The workflow validates incoming invoices, routes them for approval to an AP Clerk, and logs the outcome.
 
 Continue to - [Exercise 2 - Create and Deploy a Custom Agent](../ex2/README.md)
