@@ -1,18 +1,21 @@
 # Exercise 2 - Create and Deploy a Custom Agent
 
-In this exercise, you will extend the invoice approval solution by adding a custom AI agent powered by an MCP server. The agent will be connected to the invoice approval workflow created in Exercise 1 and deployed alongside it.
+In this exercise, you will extend the invoice approval solution by adding a custom AI agent powered by an MCP server. The agent retreive all the blocked invoices from SAP S/4 HANA Public Cloud and start a workflow for each invoice. The agent will be connected to the invoice approval workflow created in Exercise 1 and deployed alongside it.
 
 ## Exercise 2.1 - Build and Deploy the Agent
 
 After completing these steps you will have created and deployed a custom agent with an MCP server that orchestrates the invoice approval workflow.
 
 1. Create a new Agent with the following prompt in the same solution.
+ ```
+Create a new custom agent retrieve blocked invoices from S/4 HANA Public Cloud and start the Invoice Approval Workflow
+ ```
 <br>![](images/Step1.png)
 
 2. Provide an answer to the questions from the Webagent.
 <br>![](images/Step2.png)
 
-3. Confirm using the ORD ID of the webhook of the workflow to start the workflow by the agent.
+3. Confirm using the ORD ID of the webhook API of the workflow to start the workflow by the agent.
 <br>![](images/Step3.png)
 
 4. Confirm the intent and click **Submit**.
@@ -42,5 +45,34 @@ After completing these steps you will have created and deployed a custom agent w
 ## Summary
 
 You have successfully created and deployed a custom agent with an MCP server in Joule Studio. The agent is connected to the invoice approval workflow and can orchestrate the end-to-end invoice processing flow.
+
+## Exercise 2.2 - Test the Agent
+
+After completing these steps you will have tested the deployed agent and reviewed its execution traces in the monitoring dashboard.
+
+1. In the **Manage** tab, under **Try Deployed Solution**, click **blocked-invoice-retrieval-agent** to open the agent test interface.
+<br>![](images/Step12.png)
+
+2. The agent test interface opens. Enter the following prompt and send it:
+    ```
+    Retrieve all blocked invoices
+    ```
+<br>![](images/Step13.png)
+
+3. The agent retrieves blocked invoices from SAP S/4HANA and returns the results, listing the blocked supplier invoices with their details.
+<br>![](images/Step14.png)
+
+4. In **Monitoring & Analytics**, navigate to **blocked-invoice-retrieval-agent → Monitoring** to view the monitoring dashboard showing the Error Rate and Average Latency for all agent runs.
+<br>![](images/Step15.png)
+
+5. Click **Traces** under **blocked-invoice-retrieval-agent** to view the list of all agent execution traces with their success and error status.
+<br>![](images/Step16.png)
+
+6. Click on a trace to view its details, showing the full LangGraph workflow execution including model calls and tool invocations.
+<br>![](images/Step17.png)
+
+## Summary
+
+You have successfully tested the blocked invoice retrieval agent and explored its execution traces in Joule Studio Monitoring & Analytics.
 
 Continue to - [Exercise 3 - Test the Solution](../ex3/README.md)
