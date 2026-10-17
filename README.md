@@ -21,6 +21,10 @@ This session introduces attendees to building and deploying agentic workflows us
 
 The scenario is based on a real-world accounts payable use case: an invoice with a payment block exists in SAP S/4HANA Cloud. An AI agent retrieves the invoice and analyses it in the context of the related purchase order, goods receipt, and supplier contract. The agent's findings are presented to an approver through Joule Chat, enabling a conversational experience to review the details and make an informed decision. When the approver approves the invoice, the payment block is automatically removed in SAP S/4HANA Cloud.
 
+SAP Business AI Platform provides agentic workflow capabilities, and n8n is the SAP agentic workflow orchestration solution included in Joule Studio. It leverages n8n as a modern agentic workflow engine, running on scalable and robust SAP infrastructure with AI-driven development using LLMs and SAP knowledge systems.
+
+![](images/n8n.png)
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are:
@@ -30,15 +34,15 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-- [Getting Started](exercises/ex0/)
 - [Exercise 1 - Create an Invoice Approval Workflow](exercises/ex1/)
-    - [Exercise 1.1 - Build the Workflow,deploy and test](exercises/ex1#exercise-11-build-the-workflow)
+    - [Exercise 1.1 - Build the Workflow](exercises/ex1#exercise-11-build-the-workflow)
+    - [Exercise 1.2 - Deploy and Test the Workflow](exercises/ex1#exercise-12-deploy-and-test-the-workflow)
 - [Exercise 2 - Create and Deploy a Custom Agent](exercises/ex2/)
-    - [Exercise 2.1 - Create a Custom Agent to Read Invoice and Related Documents](exercises/ex2#exercise-21-create-a-custom-agent)
-    - [Exercise 2.2 - Deploy and Test the Agent](exercises/ex1#exercise-22-deploy-and-test-the-agent)
-- [Exercise 3 - Test the Workflow with Joule Chat](exercises/ex3/)
-    - [Exercise 3.1 - Experience the Conversational Approval Flow](exercises/ex3#exercise-31-conversational-approval-flow)
-    - [Exercise 3.2 - Approve the Invoice and Verify Payment Block Removal](exercises/ex3#exercise-32-approve-and-verify)
+    - [Exercise 2.1 - Build and Deploy the Agent](exercises/ex2#exercise-21-build-and-deploy-the-agent)
+    - [Exercise 2.2 - Test the Agent](exercises/ex2#exercise-22-test-the-agent)
+- [Exercise 3 - Create an Invoice Verification Agent](exercises/ex3/)
+    - [Exercise 3.1 - Build the Invoice Verification Agent](exercises/ex3#exercise-31-build-the-invoice-verification-agent)
+    - [Exercise 3.2 - Review and Deploy the Agent](exercises/ex3#exercise-32-review-and-deploy-the-agent)
 
   
 **OR** Link to the Tutorial Navigator for example...
