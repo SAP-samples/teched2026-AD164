@@ -75,4 +75,30 @@ After completing these steps you will have tested the deployed agent and reviewe
 
 You have successfully tested the blocked invoice retrieval agent and explored its execution traces in Joule Studio Monitoring & Analytics.
 
+## Exercise 2.3 - Create an Invoice Verification Agent
+
+After completing these steps you will have created an invoice verification agent that reads an invoice from SAP S/4HANA Public Cloud together with the related Purchase Order, Goods Receipt, and Supplier contract, and summarizes the reason for any payment block.
+
+1. Click **New** and select **Agent**. In the **Create Agent** dialog, enter the following intent statement in the **Intent Statement** field:
+    ```
+    Please create an agent. The agent should...Read an invoice from SAP S/4 HANA Public Cloud, related Purchase Order, Goods Receipt and Supplier contract. Compare the invoice with these business documents and summarize the reason if the invoice has any payment block.
+    ```
+<br>![](images/Step18.png)
+
+2. Check **Quick Create** to skip the clarifying questions and start building the solution directly. Click **Create**.
+<br>![](images/Step19.png)
+
+3. Even in Quick Create mode, the Webagent asks for measurable business goals. Enter the following and click **Submit Answer**:
+    ```
+    Reduce time to identify payment block reasons from 2 hours to 5 minutes
+    ```
+<br>![](images/Step20.png)
+
+4. The Webagent generates the specification, identifying the required SAP APIs — Supplier Invoice, Purchase Order, Goods Receipt, and Purchasing Info Record. Review the specification and type **execute specification/specification.md** to proceed with the build.
+<br>![](images/Step21.png)
+
+## Summary
+
+You have successfully created an invoice verification agent in Joule Studio. The agent reads invoice data and related business documents from SAP S/4HANA Public Cloud and summarizes the reason for any payment block.
+
 Continue to - [Exercise 3 - Test the Solution](../ex3/README.md)
