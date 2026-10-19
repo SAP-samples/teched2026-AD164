@@ -17,7 +17,7 @@ After completing these steps you will have built an invoice approval workflow th
 
 1. **Log on to SAP Joule Studio** in your browser (preferably Chrome) : 
 https://747391938.eu10.sapdas.cloud.sap/new/
-with username AD164-0XX  (XX to be replaced with the number as provided)  and the password as shared by your trainers.
+with username <br>AD164-0XX  (XX to be replaced with the number as provided)  and the password as shared by your trainers.
 
 2. You arrive on the **Joule Studio home screen**, which opens with the **Joule Chat** interface. *(Review only — get oriented.)*
 <br>![](images/Step2.png)
