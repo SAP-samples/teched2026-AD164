@@ -15,13 +15,16 @@ In this exercise, you will use SAP Joule Studio to create an agentic invoice app
 
 After completing these steps you will have built an invoice approval workflow that validates invoices, routes them to an AP Clerk for approval via email and Teams notifications, and logs the outcome.
 
-1. **Log on to SAP Joule Studio** in your browser using the credentials shared by your trainers.
+1. **Log on to SAP Joule Studio** in your browser (preferably Chrome) : 
+https://747391938.eu10.sapdas.cloud.sap/new/
+with username AD164-0XX  (XX to be replaced with the number as provided)  and the password as shared by your trainers.
+   
 <br>![](images/Step1.png)
 
-2. You arrive on the **Joule Studio home screen**, which opens with the **Joule Chat** interface. *(Review only — get oriented.)*
+3. You arrive on the **Joule Studio home screen**, which opens with the **Joule Chat** interface. *(Review only — get oriented.)*
 <br>![](images/Step2.png)
 
-3. In the left navigation, **click Solutions** to open the Solutions area.
+4. In the left navigation, **click Solutions** to open the Solutions area.
 > A **solution** groups one or more **assets** (a workflow, agent, or MCP server) and is what you ultimately deploy.
 <br>![](images/Step3.png)
 
