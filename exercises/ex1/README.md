@@ -33,12 +33,14 @@ with username <br>AD164-0XX  (XX to be replaced with the number as provided)  an
 > You're telling Joule Studio to build this solution as a visual n8n workflow (a sequence of connected nodes).
 <br>![](images/Step5.png)
 
-6. **Paste the intent statement below into the Intent field**, optionally add a **Solution name** (use your username), then **click Create**.
+6. **Paste the intent statement below into the Intent field**,  add a **Solution name** (use your username for eg: AD164-xxx), then **click Create**.
 > Your **intent** is simply the business outcome you want. The Webagent translates it into requirement and specification documents using SAP knowledge systems and SAP LeanIX, then builds the solution for you — you don't need to write any technical detail here.
     ```
-    Please create a workflow. The workflow should...Receive Invoice data as input, do basic validation of each line item of the invoice. Submit the invoice for an approval to a AP clerk for approval. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice.
+    Please create a workflow. The workflow should...Receive Invoice header data as input, do basic validation and submit the invoice for an approval to a AP clerk. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice.
     ```
 <br>![](images/Step6.png)
+> **The webagent clarify the intent from next step onwards.It may not be the same as described in the steps.Please provide appropriate answers and continue** .
+
 
 7. The Webagent now asks clarifying questions about the trigger, validation, and approver. **Enter the following answer and submit it:**
     ```
