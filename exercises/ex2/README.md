@@ -1,87 +1,107 @@
-# Exercise 2 - Create and Deploy a Custom Agent
+# Exercise 2 - Build and Deploy an Invoice PO Validation AI Agent
 
-In this exercise, you will extend your invoice solution by adding a **custom AI agent**. The agent retrieves all blocked invoices from SAP S/4HANA Public Cloud and starts the invoice approval workflow you built in Exercise 1 for each one. You will build the agent with the Webagent, deploy it, and then test it.
+In this exercise, you extend the invoice approval workflow from Exercise 1 with a new AI agent that validates supplier invoices against Purchase Orders in S/4HANA Public Cloud. The agent identifies block reasons and enriches the AP clerk's SAP Task Center approval task with a structured analysis — reducing their review time from 20 minutes to 5 minutes per invoice.
 
-> **New terms for this exercise:**
-> - **Agent** — an AI component that can reason over a request, decide what to do, and call tools or workflows to get it done.
-> - **MCP server** — a **Model Context Protocol** server: a standardized adapter that lets the agent securely call tools and APIs (here, your SAP S/4HANA data and your workflow). The Webagent generates it for you.
->
-> As in Exercise 1, the **action you perform** is shown in bold, and steps marked *(Review only)* need no action.
+As in Exercise 1, you describe what you want in plain business language and the Webagent builds it for you. This time it creates three new assets and extends your existing workflow:
 
-## Exercise 2.1 - Build and Deploy the Agent
+- **`invoice-po-validation-agent`** — a Python A2A agent that queries S/4HANA Public Cloud via two OData APIs
+- **`sap-s4-api-supplierinvoice-process-srv-mcp-server`** — MCP server wrapping the Supplier Invoice API
+- **`sap-s4-ce-purchaseorder-0001-mcp-server`** — MCP server wrapping the Purchase Order API
+- **Updated `invoice-approval-workflow`** — your n8n workflow from Exercise 1, extended with a new "Validate Invoice Against PO" node between the validation and approval steps
 
-After completing these steps you will have created and deployed a custom agent, with its MCP server, that orchestrates the invoice approval workflow.
+> **Throughout this guide, the action you need to perform is shown in bold.** Steps marked *(Review only)* need no action — just look and move on.
 
-1. In the same solution, **start a new Agent** and enter the following prompt:
+## Exercise 2.1 - Build the Agent
+
+After completing these steps you will have built and deployed an AI agent that validates invoices against POs and an extended workflow that calls it automatically.
+
+1. Return to the **Develop** tab of your solution (AD164-0XX) in Joule Studio. In the Webagent chat area, **paste the following intent and send it**:
     ```
-    Create a new custom agent retrieve blocked invoices from S/4 HANA Public Cloud and start the Invoice Approval Workflow
+    Create a new custom agent, validate the Invoice with related purchase Order in S/4 HANA Public Cloud and provide the reason for invoice block. The AP Clerk approval task get the agent analysis to make a decision in the approval task.
     ```
 <br>![](images/Step1.png)
 
-2. **Answer the Webagent's clarifying questions.**
+2. The Webagent asks for the primary business outcome this agent should deliver. **Type the following and send it**:
+    ```
+    Reduce time spent by AP clerks reviewing blocked invoices from 20 minutes to 5 minutes per invoice
+    ```
 <br>![](images/Step2.png)
 
-3. **Confirm the ORD ID of the workflow's webhook API** so the agent knows which workflow to start.
-> The **ORD ID** (Open Resource Discovery ID) is the unique identifier of your workflow's webhook API — it is how the agent locates and triggers the correct workflow.
+3. The Webagent presents a **Business Goals & Success Criteria** table (Metric: AP Clerk invoice review time, Baseline: 20 min, Target: 5 min). *(Review only — confirm the goal and target match your intent.)*
 <br>![](images/Step3.png)
 
-4. **Confirm the intent and click Submit.**
+4. **Select "Confirm — proceed"** and **click Submit Answer** to accept the business goal.
 <br>![](images/Step4.png)
 
-5. **Proceed with the requirements.**
+5. The Webagent shows a full **Intent Analysis Summary**: Business Challenge, Goals, what will be built (a new AI Agent + Extended n8n Workflow), the two OData APIs to be used, and a Solution Fit score of 90%. **Type `Yes`** and **send it** to proceed to the Product Requirements Document (PRD).
 <br>![](images/Step5.png)
 
-6. **Review the requirements and confirm them.**
+6. The Webagent presents the **Solution Architecture** diagram and **Scope Boundaries** for the Invoice PO Validation AI Agent. *(Review only — familiarise yourself with the design.)* **Type `confirm`** and **send it** to write the PRD.
 <br>![](images/Step6.png)
 
-7. **Accept the technical specification step.**
+7. The Webagent saves `product-requirements-document.md` and names the solution **"Invoice PO Validation AI Agent"**. It asks whether to proceed to the **specification phase**. **Type `Yes`** and **send it**.
 <br>![](images/Step7.png)
 
-8. **Review the specification and proceed to build the solution.**
+8. The Webagent produces the **Specification Summary** listing two build targets: `invoice-po-validation-agent` (Python A2A agent) and the extended `invoice-approval-workflow` (n8n). *(Review only — check the build targets match expectations.)*
 <br>![](images/Step8.png)
 
-9. **Review the solution generated by the Webagent.** *(Review only.)*
+9. The Webagent confirms the specification is ready to execute. **Type `Yes`** and **send it** to start the build.
 <br>![](images/Step9.png)
 
-10. Your solution now includes an **Agent** and an **MCP server** alongside the workflow. *(Review only.)*
+10. The Webagent builds the solution. When it finishes, the **"Invoice PO Validation Agent — Complete ✅"** message appears. It reports **4 assets created** and **121 tests passing**. **Type `deploy`** and **send it** to deploy the solution.
 <br>![](images/Step10.png)
 
-11. **Deploy the solution.** The deployment log then confirms that the **Agent, custom MCP server, and workflow** are all deployed successfully.
+11. The **Manage** tab opens automatically after deployment. The solution **AD164-0XX** shows status **Running** (version 1.0.0+snapshot.2) with all four assets running: `invoice-approval-workflow`, `invoice-po-validation-agent`, `sap-s4-api-supplierinvoice-process-srv-mcp-server`, and `sap-s4-ce-purchaseorder-0001-mcp-server`. *(Review only — confirm all assets show Running.)*
 <br>![](images/Step11.png)
 
-## Summary
-
-You have successfully created and deployed a custom agent with an MCP server in Joule Studio. The agent is connected to the invoice approval workflow and can orchestrate the end-to-end invoice processing flow.
-
-## Exercise 2.2 - Test the Agent
-
-After completing these steps you will have tested the deployed agent and reviewed its execution traces in the monitoring dashboard.
-
-1. In the **Manage** tab, under **Try Deployed Solution**, **click blocked-invoice-retrieval-agent** to open the agent test interface.
+12. In the left panel under **Monitoring & Analytics**, **click `invoice-approval-workflow`** to open the n8n workflow editor. You can see the extended workflow: the new **"Validate Invoice Against PO"** SAP Agent node has been inserted between the Validate Invoice and Approve Invoice nodes. *(Review only — observe how the AI agent fits into the flow.)*
 <br>![](images/Step12.png)
 
-2. In the test interface, **enter the following prompt and send it:**
-    ```
-    Retrieve all blocked invoices
-    ```
+## Exercise 2.2 - Test the Extended Solution
+
+After completing these steps you will have run the end-to-end workflow, confirmed the AI agent's PO validation ran, and checked for the resulting task in SAP Task Center.
+
+1. In the **Manage** tab under **Try Deployed Solution**, **click `invoice-po-validation-agent`** to open the agent's test interface. In the input field, **type `5108022036/2026`** (an invoice number / fiscal year) and **send it** to test the agent standalone.
 <br>![](images/Step13.png)
 
-3. The agent retrieves the blocked invoices from SAP S/4HANA and lists them with their details. *(Review only — check the result.)*
+2. The agent responds with a structured **Supplier Invoice Details** report for invoice **5108022036** (fiscal year 2026): Header Information (Invoice Number, Fiscal Year, Supplier Invoice ID: DEMO-BLK-002, Company Code: 1010, Supplier: 10100088, Invoice Status: Posted, Approval Status: Workflow not yet started) and Financial Details (Gross Amount: 514.87 AED). *(Review only — this confirms the agent can query S/4HANA and return invoice data.)*
 <br>![](images/Step14.png)
 
-4. Under **Monitoring & Analytics**, **open blocked-invoice-retrieval-agent → Monitoring** to view the dashboard showing **Error Rate** and **Average Latency** across all agent runs.
+3. Now test the full end-to-end workflow. Under **Try Deployed Solution**, **click `invoice-approval-workflow`**. The Webagent tells you the workflow needs: Invoice Number, Invoice Date, Vendor, Amount, Currency, and Company Code. **Enter the following JSON** in the input field and **send it**:
+    ```json
+    {
+      "invoiceNumber": "5108022036",
+      "vendor": "Acme Corp",
+      "invoiceDate": "2026-10-23",
+      "amount": 12500.00,
+      "currency": "EUR",
+      "companyCode": "1000"
+    }
+    ```
 <br>![](images/Step15.png)
 
-5. **Click Traces** (under the agent) to list every agent run with its success or error status.
-> A **trace** is a detailed record of one agent run — every reasoning step, model call, and tool invocation. Traces help you understand and troubleshoot what the agent did.
+4. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number: 5108022036, Vendor: Acme Corp, Invoice Date: 2026-10-23, Amount: 12500, Currency: EUR, Company Code: 1000). **Type `Yes`** and **send it** to confirm.
 <br>![](images/Step16.png)
 
-6. **Click a trace** to open its details and see the full execution, including model calls and tool invocations.
-> Joule Studio runs agents on **LangGraph**, so a trace shows the agent's graph of steps from start to finish.
+5. The Webagent confirms **"Great, triggering the workflow now!"** and shows an **Execute Workflow** button. **Click "Execute Workflow"** to run the extended invoice approval workflow.
 <br>![](images/Step17.png)
+
+6. The Webagent confirms **"Workflow started successfully!"** with a link to the Monitoring section. **Click "Monitoring section"** to view the execution.
+<br>![](images/Step18.png)
+
+7. The **Workflow Executions** screen shows execution **1661** with status **"waiting"** (duration 7.81 s). The workflow has validated the invoice, called the PO validation agent, and created an approval task in SAP Task Center — it is now waiting for the AP clerk's decision. *(Review only.)*
+<br>![](images/Step19.png)
+
+8. **Click execution row 1661** to open its detail view. The step trace shows: Invoice Approval Submitted (2 ms) → Validate Invoice (66 ms) → **Validate Invoice Against PO** (4.3 s — the AI agent ran) → Approve Invoice (3.42 s, waiting). *(Review only — the 4.3 s step is your new AI agent calling S/4HANA.)*
+<br>![](images/Step20.png)
+> The workflow pauses here until the AP clerk acts on the enriched task in SAP Task Center. The agent's PO analysis is attached to the task to help them decide.
+
+9. In the left navigation bar, **click the Conversations icon** (speech-bubble icon) to open Joule Chat.
+<br>![](images/Step21.png)
+
+10. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see the pending AP clerk approval task — now enriched with the PO validation analysis — assigned to you in SAP Task Center.
+<br>![](images/Step22.png)
 
 ## Summary
 
-You have successfully tested the blocked invoice retrieval agent and explored its execution traces in Joule Studio Monitoring & Analytics.
-
-Continue to - [Exercise 3 - Create an Invoice Verification Agent](../ex3/README.md)
+You have successfully built, deployed, and tested an Invoice PO Validation AI Agent in Joule Studio. The Webagent generated a Python A2A agent, two custom MCP servers for S/4HANA Public Cloud, and extended your n8n workflow — all from a plain-language intent. The extended workflow now calls the agent automatically on every invoice submission, enriching the AP clerk's approval task with a structured PO analysis.
