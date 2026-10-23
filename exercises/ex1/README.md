@@ -23,22 +23,22 @@ with username <br>AD164-0XX  (XX to be replaced with the number as provided)  an
 <br>![](images/Step2.png)
 
 3. In the left navigation, **click Solutions** to open the Solutions area.
-> A **solution** groups one or more **assets** (a workflow, agent, or MCP server) and is what you ultimately deploy.
 <br>![](images/Step3.png)
+> A **solution** groups one or more **assets** (a workflow, agent, or MCP server) and is what you ultimately deploy.
 
 4. **Click New** to start creating a solution.
 <br>![](images/Step4.png)
 
 5. **Select n8n Workflow** as the type for your new solution.
-> You're telling Joule Studio to build this solution as a visual n8n workflow (a sequence of connected nodes).
 <br>![](images/Step5.png)
+> You're telling Joule Studio to build this solution as a visual n8n workflow (a sequence of connected nodes).
 
 6. The **Create n8n Workflow** dialog opens. **Enter your solution name** (e.g. `AD164-00`, replacing `00` with your user number), **paste the following intent into the Intent Statement field**, and **click Create**:
     ```
     Please create a workflow. The workflow should...Receive Invoice header data as input, do basic validation and submit the invoice for an approval to an AP clerk. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice
     ```
-> Your **intent** is simply the business outcome you want. The Webagent translates it into requirement and specification documents, then builds the solution for you — you don't need to write any technical detail here.
 <br>![](images/Step6.png)
+> Your **intent** is simply the business outcome you want. The Webagent translates it into requirement and specification documents, then builds the solution for you — you don't need to write any technical detail here.
 > **The Webagent will ask clarifying questions from this step onwards. The questions may differ slightly from what is shown in the screenshots — provide appropriate answers and continue.**
 
 
@@ -70,8 +70,8 @@ with username <br>AD164-0XX  (XX to be replaced with the number as provided)  an
 <br>![](images/Step15.png)
 
 16. Before writing the specification, the Webagent needs to know who receives the approval task in **SAP Task Center**. **Select "A fixed email address (I'll provide it)"** and **click Submit Answer**. Then **enter your own email address** when prompted.
-> Use your own email address so the approval task appears in your own workspace.
 <br>![](images/Step16.png)
+> Use your own email address so the approval task appears in your own workspace.
 
 17. The specification is ready. The Webagent summarises a **11-node workflow**: Webhook trigger → IF validation → Microsoft Outlook + Teams notifications → SAP Task Center approval → Route decision → Set response → Respond to Webhook. **Type `Yes`** and **send it** to build the workflow now.
 <br>![](images/Step17.png)
@@ -121,8 +121,8 @@ After completing these steps you will have deployed your workflow and run it end
       "companyCode": "2000"
     }
     ```
-> You can use any valid invoice number and any amount greater than 0.
 <br>![](images/Step28.png)
+> You can use any valid invoice number and any amount greater than 0.
 
 8. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number, Vendor, Invoice Date, Amount, Currency, Company Code). Review it, then **type `yes` and send** to confirm and submit to the workflow.
 <br>![](images/Step29.png)
@@ -137,8 +137,8 @@ After completing these steps you will have deployed your workflow and run it end
 <br>![](images/Step32.png)
 
 12. **Click the execution row** (e.g. 1646) to open its detail view. The step trace shows: Invoice Approval Submitted (3ms) → Validate Invoice (67ms) → Approve Invoice (3.75s, currently waiting for the AP clerk's decision). *(Review only — observe how each node's execution is tracked.)*
-> The workflow pauses here until the AP clerk acts in SAP Task Center.
 <br>![](images/Step33.png)
+> The workflow pauses here until the AP clerk acts in SAP Task Center.
 
 13. The workflow is now waiting for approval. In the left navigation bar, **click the Conversations icon** (speech-bubble icon) to open Joule Chat.
 <br>![](images/Step34.png)
