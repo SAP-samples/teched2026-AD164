@@ -108,10 +108,7 @@ After completing these steps you will have deployed your workflow and run it end
 5. The Webagent explains the workflow's input requirements and provides an example **validation failure** payload (sending `amount: 0` returns a `400` response immediately, without reaching the AP clerk). *(Review only — you can try the failure scenario yourself if time permits.)*
 <br>![](images/Step26.png)
 
-6. The Webagent generates sample invoice test data. *(Review only — scroll to see all the generated fields.)*
-<br>![](images/Step27.png)
-
-7. **Enter the following test invoice JSON** in the message box and **send it**:
+6. **Enter the following test invoice JSON** in the message box and **send it**:
     ```json
     {
       "invoiceNumber": "INV-2026-00124",
@@ -125,29 +122,29 @@ After completing these steps you will have deployed your workflow and run it end
 <br>![](images/Step28.png)
 > You can use any valid invoice number and any amount greater than 0.
 
-8. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number, Vendor, Invoice Date, Amount, Currency, Company Code). Review it, then **type `yes` and send** to confirm and submit to the workflow.
+7. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number, Vendor, Invoice Date, Amount, Currency, Company Code). Review it, then **type `yes` and send** to confirm and submit to the workflow.
 <br>![](images/Step29.png)
 
-9. **Click "Execute Workflow"** to trigger the invoice approval workflow with your test data.
+8. **Click "Execute Workflow"** to trigger the invoice approval workflow with your test data.
 <br>![](images/Step30.png)
 
-10. The Webagent confirms **"Workflow started successfully!"** with a link to the Monitoring section. **Click "Monitoring section"** to view the execution.
+9. The Webagent confirms **"Workflow started successfully!"** with a link to the Monitoring section. **Click "Monitoring section"** to view the execution.
 <br>![](images/Step31.png)
 
-11. The **Monitoring** dashboard shows **1 total execution** with status **"waiting"** — the workflow has validated the invoice and created an approval task for the AP clerk in SAP Task Center. It is waiting for the approval decision. *(Review only.)*
+10. The **Monitoring** dashboard shows **1 total execution** with status **"waiting"** — the workflow has validated the invoice and created an approval task for the AP clerk in SAP Task Center. It is waiting for the approval decision. *(Review only.)*
 <br>![](images/Step32.png)
 
-12. **Click the execution row** (e.g. 1646) to open its detail view. The step trace shows: Invoice Approval Submitted (3ms) → Validate Invoice (67ms) → Approve Invoice (3.75s, currently waiting for the AP clerk's decision). *(Review only — observe how each node's execution is tracked.)*
+11. **Click the execution row** (e.g. 1646) to open its detail view. The step trace shows: Invoice Approval Submitted (3ms) → Validate Invoice (67ms) → Approve Invoice (3.75s, currently waiting for the AP clerk's decision). *(Review only — observe how each node's execution is tracked.)*
 <br>![](images/Step33.png)
 > The workflow pauses here until the AP clerk acts in SAP Task Center.
 
-13. The workflow is now waiting for approval. In the left navigation bar, **click the Conversations icon** (speech-bubble icon) to open Joule Chat.
+12. The workflow is now waiting for approval. In the left navigation bar, **click the Conversations icon** (speech-bubble icon) to open Joule Chat.
 <br>![](images/Step34.png)
 
-14. The **Conversations** panel opens. **Click "+ New"** to start a new conversation with Joule.
+13. The **Conversations** panel opens. **Click "+ New"** to start a new conversation with Joule.
 <br>![](images/Step35.png)
 
-15. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see pending approval tasks assigned to you in SAP Task Center.
+14. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see pending approval tasks assigned to you in SAP Task Center.
 <br>![](images/Step36.png)
 
 ## Summary
