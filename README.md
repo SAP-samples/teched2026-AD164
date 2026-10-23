@@ -1,14 +1,3 @@
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The REUSE.toml file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the REUSE.toml in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
 # Session AD164 - Generate agentic workflows using SAP-managed n8n in Joule Studio
 
 ## Description
@@ -35,23 +24,11 @@ The requirements to follow the exercises in this repository are:
 ## Exercises
 
 - [Exercise 1 - Create an Invoice Approval Workflow](exercises/ex1/)
-    - [Exercise 1.1 - Build the Workflow](exercises/ex1#exercise-11-build-the-workflow)
-    - [Exercise 1.2 - Deploy and Test the Workflow](exercises/ex1#exercise-12-deploy-and-test-the-workflow)
-- [Exercise 2 - Create and Deploy a Custom Agent](exercises/ex2/)
-    - [Exercise 2.1 - Build and Deploy the Agent](exercises/ex2#exercise-21-build-and-deploy-the-agent)
-    - [Exercise 2.2 - Test the Agent](exercises/ex2#exercise-22-test-the-agent)
-- [Exercise 3 - Create an Invoice Verification Agent](exercises/ex3/)
-    - [Exercise 3.1 - Build the Invoice Verification Agent](exercises/ex3#exercise-31-build-the-invoice-verification-agent)
-    - [Exercise 3.2 - Review and Deploy the Agent](exercises/ex3#exercise-32-review-and-deploy-the-agent)
-
-  
-**OR** Link to the Tutorial Navigator for example...
-
-Start the exercises [here](https://developers.sap.com/tutorials/abap-environment-trial-onboarding.html).
-
-**IMPORTANT**
-
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+    - [Exercise 1.1 - Build the Workflow](exercises/ex1#exercise-11---build-the-workflow)
+    - [Exercise 1.2 - Deploy and Test the Workflow](exercises/ex1#exercise-12---deploy-and-test-the-workflow)
+- [Exercise 2 - Build and Deploy an Invoice PO Validation AI Agent](exercises/ex2/)
+    - [Exercise 2.1 - Build the Agent](exercises/ex2#exercise-21---build-the-agent)
+    - [Exercise 2.2 - Test the Extended Solution](exercises/ex2#exercise-22---test-the-extended-solution)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
