@@ -71,7 +71,8 @@ with username <br>AD164-0XX  (XX to be replaced with the number as provided)  an
 
 16. Before writing the specification, the Webagent needs to know who receives the approval task in **SAP Task Center**. **Select "A fixed email address (I'll provide it)"** and **click Submit Answer**. Then **enter your own email address** when prompted.
 <br>![](images/Step16.png)
-> Use your own email address so the approval task appears in your own workspace.
+> **Not sure what your email address is?** Click the **avatar icon (your initials)** at the bottom-left of the navigation bar — your email is shown at the top of the profile panel.
+<br>![](images/Step16b.png)
 
 17. The specification is ready. The Webagent summarises a **11-node workflow**: Webhook trigger → IF validation → Microsoft Outlook + Teams notifications → SAP Task Center approval → Route decision → Set response → Respond to Webhook. **Type `Yes`** and **send it** to build the workflow now.
 <br>![](images/Step17.png)
