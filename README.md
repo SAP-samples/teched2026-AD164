@@ -23,13 +23,13 @@ The requirements to follow the exercises in this repository are:
 
 ## Solution Progression
 
-All three exercises are built around the same Invoice-to-Pay accounts payable scenario. They demonstrate two complementary architectural patterns — in both cases the AI agent consumes S/4HANA Public Cloud domain models.
+All three exercises are built around the same Invoice-to-Pay accounts payable scenario. They demonstrate two complementary architectural patterns. In both patterns the AI agent performs analysis only — the human approval step is always a subsequent step in the workflow via SAP Task Center.
 
-**Exercises 1 & 2 — Workflow calls Agent (Human in the Loop)**
-An n8n workflow is the entry point. It validates the invoice, calls an AI agent to compare it against the Purchase Order in S/4HANA Public Cloud, and routes the agent's analysis to an AP Clerk via SAP Task Center for the final approve or reject decision.
+**Exercises 1 & 2 — Workflow calls Agent**
+An n8n workflow is the entry point. It validates the invoice and calls an AI agent to analyse it against the Purchase Order in S/4HANA Public Cloud. After receiving the agent's analysis, the workflow routes it to an AP Clerk via SAP Task Center for the final approve or reject decision (human in the loop).
 
-**Exercise 3 — Agent calls Workflow (Human in the Loop)**
-An AI agent is the entry point. It retrieves a payment-blocked invoice from S/4HANA Public Cloud, performs a 3-way match against the Purchase Order, Goods Receipt, and Supplier Contract, then triggers an n8n workflow that delivers the agent's findings to an AP Clerk via SAP Task Center.
+**Exercise 3 — Agent triggers Workflow**
+An AI agent is the entry point. It retrieves a payment-blocked invoice from S/4HANA Public Cloud and performs a 3-way match against the Purchase Order, Goods Receipt, and Supplier Contract. The agent's findings then trigger an n8n workflow that delivers the analysis to an AP Clerk via SAP Task Center for the final approve or reject decision (human in the loop).
 
 | | Exercises 1 & 2 | Exercise 3 |
 |---|---|---|
