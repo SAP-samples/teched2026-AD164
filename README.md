@@ -33,6 +33,39 @@ The requirements to follow the exercises in this repository are:
     - [Exercise 3.1 - Build the Agent](exercises/ex3#exercise-31---build-the-agent)
     - [Exercise 3.2 - Deploy and Test the Solution](exercises/ex3#exercise-32---deploy-and-test-the-solution)
 
+## Solution Progression
+
+The three exercises build progressively on the same accounts payable scenario — from a simple workflow with a human decision step, through adding AI analysis to an existing workflow, to building a fully autonomous AI agent that drives the process end to end.
+
+```mermaid
+flowchart TB
+
+    subgraph EX1 ["Exercise 1 — Invoice Approval Workflow"]
+        direction LR
+        A1(Invoice Data) --> B1[n8n: Validate Invoice] --> C1[SAP Task Center] --> D1{AP Clerk\nApprove / Reject} --> E1(Result Returned)
+    end
+
+    subgraph EX2 ["Exercise 2 — Adds a PO Validation Agent to the Exercise 1 Workflow"]
+        direction LR
+        A2(Invoice Data) --> B2[n8n: Validate Invoice] --> C2["AI Agent\nInvoice vs PO"] --> D2["SAP Task Center\n+ Agent Analysis"] --> E2{AP Clerk\nApprove / Reject} --> F2(Result Returned)
+        S2[(S/4HANA\nPurchase Order)] -. query .-> C2
+    end
+
+    subgraph EX3 ["Exercise 3 — New Solution: AP Invoice Payment Block Processing"]
+        direction LR
+        S3[(S/4HANA\nInvoice · PO · GR · Contract)] --> B3["AI Agent\n3-Way Match"] --> C3["n8n Workflow\nAgent Findings"] --> D3["SAP Task Center\n+ Analysis"] --> E3{AP Clerk\nApprove / Reject} --> F3("Payment Block\nReleased / Kept")
+    end
+```
+
+| | Exercise 1 | Exercise 2 | Exercise 3 |
+|---|---|---|---|
+| **Type** | n8n Workflow | n8n Workflow + AI Agent | AI Agent + n8n Workflow |
+| **Input** | Invoice header data | Invoice header data | Blocked invoice in S/4HANA |
+| **S/4HANA data** | — | Purchase Order | Invoice · PO · Goods Receipt · Purchasing Info Record |
+| **AI** | — | Invoice vs PO comparison | 3-way match: Invoice × PO × GR × Contract |
+| **Assets built** | 1 | 4 (workflow + agent + 2 MCP servers) | 7 (agent + workflow + 5 MCP servers) |
+| **Outcome** | Approve / Reject | Approve / Reject + PO analysis | Approve / Reject + payment block released |
+
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
 
