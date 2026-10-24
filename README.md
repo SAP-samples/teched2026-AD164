@@ -29,6 +29,9 @@ The requirements to follow the exercises in this repository are:
 - [Exercise 2 - Build and Deploy an Invoice PO Validation AI Agent](exercises/ex2/)
     - [Exercise 2.1 - Build the Agent](exercises/ex2#exercise-21---build-the-agent)
     - [Exercise 2.2 - Test the Extended Solution](exercises/ex2#exercise-22---test-the-extended-solution)
+- [Exercise 3 - Build and Deploy an AP Invoice Payment Block Processing Agent](exercises/ex3/)
+    - [Exercise 3.1 - Build the Agent](exercises/ex3#exercise-31---build-the-agent)
+    - [Exercise 3.2 - Deploy and Test the Solution](exercises/ex3#exercise-32---deploy-and-test-the-solution)
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
