@@ -40,13 +40,13 @@ An AI agent is the entry point. It retrieves a payment-blocked invoice from S/4H
 
 ## Exercises
 
-- [Exercise 1 - Create an Invoice Approval Workflow](exercises/ex1/)
+- [Exercise 1 - Create a Workflow, Deploy and Test](exercises/ex1/)
     - [Exercise 1.1 - Build the Workflow](exercises/ex1#exercise-11---build-the-workflow)
     - [Exercise 1.2 - Deploy and Test the Workflow](exercises/ex1#exercise-12---deploy-and-test-the-workflow)
-- [Exercise 2 - Build and Deploy an Invoice PO Validation AI Agent](exercises/ex2/)
+- [Exercise 2 - Create an Agent and Use it as a Step in the Workflow, Deploy and Test](exercises/ex2/)
     - [Exercise 2.1 - Build the Agent](exercises/ex2#exercise-21---build-the-agent)
     - [Exercise 2.2 - Test the Extended Solution](exercises/ex2#exercise-22---test-the-extended-solution)
-- [Exercise 3 - Build and Deploy an AP Invoice Payment Block Processing Agent](exercises/ex3/)
+- [Exercise 3 - Create Agent and Workflow in the Same Solution, Deploy and Test](exercises/ex3/)
     - [Exercise 3.1 - Build the Agent](exercises/ex3#exercise-31---build-the-agent)
     - [Exercise 3.2 - Deploy and Test the Solution](exercises/ex3#exercise-32---deploy-and-test-the-solution)
 
