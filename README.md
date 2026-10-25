@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2026 session called Session AD164 - Generate agentic workflows using SAP-managed n8n in Joule Studio.  
+This repository contains the material for the SAP TechEd 2026 session called Session AD164 - Generate agentic workflows using managed service for n8n in Joule Studio.  
 
 ## Overview
 
