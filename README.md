@@ -33,10 +33,10 @@ An AI agent is the entry point. It retrieves a payment-blocked invoice from S/4H
 
 | | Exercises 1 & 2 | Exercise 3 |
 |---|---|---|
-| **Entry point** | n8n Workflow | AI Agent |
-| **S/4HANA data** | Purchase Order | Invoice · PO · Goods Receipt · Purchasing Info Record |
+| **Entry point** | n8n Workflow | AI Agent or Joule Chat |
+| **S/4HANA data** | Invoice , Purchase Order | Invoice · Purchase Order|
 | **Human decision** | AP Clerk via SAP Task Center | AP Clerk via SAP Task Center |
-| **Outcome** | Invoice approved / rejected | Invoice approved / rejected · payment block released |
+| **Outcome** | Invoice approved / rejected | Invoice approved / rejected|
 
 ## Exercises
 
@@ -45,7 +45,7 @@ An AI agent is the entry point. It retrieves a payment-blocked invoice from S/4H
     - [Exercise 1.2 - Deploy and Test the Workflow](exercises/ex1#exercise-12---deploy-and-test-the-workflow)
 - [Exercise 2 - Create an Agent and Use it as a Step in the Workflow, Deploy and Test](exercises/ex2/)
     - [Exercise 2.1 - Build the Agent](exercises/ex2#exercise-21---build-the-agent)
-    - [Exercise 2.2 - Test the Extended Solution](exercises/ex2#exercise-22---test-the-extended-solution)
+    - [Exercise 2.2 - Deploy and Test the Extended Solution](exercises/ex2#exercise-22---test-the-extended-solution)
 - [Exercise 3 - Create Agent and Workflow in the Same Solution, Deploy and Test](exercises/ex3/)
     - [Exercise 3.1 - Build the Agent](exercises/ex3#exercise-31---build-the-agent)
     - [Exercise 3.2 - Deploy and Test the Solution](exercises/ex3#exercise-32---deploy-and-test-the-solution)
