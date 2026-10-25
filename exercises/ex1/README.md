@@ -147,8 +147,23 @@ After completing these steps you will have deployed your workflow and run it end
 14. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see pending approval tasks assigned to you in SAP Task Center.
 <br>![](images/Step36.png)
 
+15. SAP Task Center returns your **Open Tasks** list (3 of 3) — all showing **Invoice Approval: INV-2026-0042**, Medium Priority, created recently. **Click "Select"** on the most recently created task to open it.
+<br>![](images/Step37.png)
+
+16. The task detail opens showing the **Task Summary**: Invoice Number (INV-2026-0042), Amount (15000.0 EUR), Vendor ID (VENDOR-001), and a description asking you to review and approve or reject the invoice. **Click "Approve"** to approve it.
+<br>![](images/Step38.png)
+
+17. A **"Confirm your response"** dialog appears: *"Do you want to approve this task?"* **Click "Acknowledge"** to confirm the approval decision.
+<br>![](images/Step39.png)
+
+18. SAP Task Center confirms **"Task completed successfully! What would you like to do next?"** The invoice has been approved and the workflow will receive the decision. *(Review only.)*
+<br>![](images/Step40.png)
+
+19. **Click "Show my remaining tasks"** to see the updated Open Tasks list (2 of 2 remaining). The task you just approved no longer appears, confirming the approval was processed successfully.
+<br>![](images/Step41.png)
+
 ## Summary
 
-You have successfully built, deployed, and tested an invoice approval workflow in Joule Studio using SAP-managed n8n. The workflow validates incoming invoices, creates an approval task for the AP Clerk in SAP Task Center, and waits for their decision — all driven from a plain-language intent.
+You have successfully built, deployed, and tested an invoice approval workflow in Joule Studio using SAP-managed n8n. The workflow validates incoming invoices, creates an approval task for the AP Clerk in SAP Task Center, and returns the outcome once the clerk approves — all driven from a plain-language intent.
 
 Continue to - [Exercise 2 - Create and Deploy a Custom Agent](../ex2/README.md)
