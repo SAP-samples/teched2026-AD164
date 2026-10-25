@@ -102,6 +102,24 @@ After completing these steps you will have run the end-to-end workflow, confirme
 10. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see the pending AP clerk approval task — now enriched with the PO validation analysis — assigned to you in SAP Task Center.
 <br>![](images/Step22.png)
 
+11. SAP Task Center opens showing your **Open Tasks** list. Locate the task **"Invoice Approval: 5108022036 from 0010100088"** (created recently, Medium Priority) and **click "Select"** to open it.
+<br>![](images/Step23.png)
+
+12. The task detail opens showing the **Task Summary** enriched with the agent's analysis: Invoice Number (5108022036), Vendor (0010100088), Amount (514.87 AED), Company Code (1010), AI Block Reason Analysis, and Invoice Date. *(Review only — note the AI Block Reason Analysis field populated by the agent.)* **Click "Approve"** to approve the invoice.
+<br>![](images/Step24.png)
+
+13. A **"Confirm your response"** dialog appears: *"Do you want to approve this task?"* **Click "Acknowledge"** to confirm the approval decision.
+<br>![](images/Step25.png)
+
+14. SAP Task Center confirms **"Task completed successfully! What would you like to do next?"** The invoice has been approved. *(Review only — the approval decision has been sent back to the workflow.)*
+<br>![](images/Step26.png)
+
+15. Return to Joule Studio. Navigate to **Manage → Monitoring & Analytics → invoice-approval-workflow → Monitoring**. The **Monitoring Cards** now show execution **1794** with status **Success** (total duration ~50 minutes — the time the workflow waited for the AP clerk's approval decision). *(Review only — confirm execution 1794 shows Success.)*
+<br>![](images/Step27.png)
+
+16. **Click execution row 1794** to view the complete step trace: Invoice Approval Submitted (1 ms) → Validate Invoice (10 ms) → **Validate Invoice Against PO** (1 m 39 s — the AI agent queried S/4HANA) → Approve Invoice (48 m 33 s — waiting for the AP clerk) → Route Approval Decision (8 ms) → Set Approved Response (18 ms) → Respond 200 Approved (11 ms). The final status is **`{ "status": "success" }`**. *(Review only — the end-to-end workflow is complete.)*
+<br>![](images/Step28.png)
+
 ## Summary
 
 You have successfully built, deployed, and tested an Invoice PO Validation AI Agent in Joule Studio. The Webagent generated a Python A2A agent, two custom MCP servers for S/4HANA Public Cloud, and extended your n8n workflow — all from a plain-language intent. The extended workflow now calls the agent automatically on every invoice submission, enriching the AP clerk's approval task with a structured PO analysis.
