@@ -1,4 +1,4 @@
-# Session AD164 - Generate agentic workflows using SAP-managed n8n in Joule Studio
+# Session AD164 - Generate agentic workflows using Managed Service for n8n in Joule Studio
 
 ## Description
 
@@ -6,7 +6,7 @@ This repository contains the material for the SAP TechEd 2026 session called Ses
 
 ## Overview
 
-This session introduces attendees to building and deploying agentic workflows using SAP-managed n8n in Joule Studio.
+This session introduces attendees to building and deploying agentic workflows using managed service for n8n in Joule Studio.
 
 The scenario is based on a real-world accounts payable use case: an invoice with a payment block exists in SAP S/4HANA Cloud. An AI agent retrieves the invoice and analyses it in the context of the related purchase order, goods receipt, and supplier contract. The agent's findings are presented to an approver through Joule Chat, enabling a conversational experience to review the details and make an informed decision. When the approver approves the invoice, the payment block is automatically removed in SAP S/4HANA Cloud.
 
@@ -18,7 +18,7 @@ SAP Business AI Platform provides agentic workflow capabilities, and n8n is the 
 
 The requirements to follow the exercises in this repository are:
 
-- SAP Joule Studio
+- Joule Studio
 - SAP S/4HANA Public Cloud
 
 ## Solution Progression
