@@ -1,10 +1,10 @@
 # Exercise 1 - Create an Invoice Approval Workflow
 
-In this exercise, you will use SAP Joule Studio to create an agentic invoice approval workflow powered by SAP-managed n8n. You will describe what you want in plain business language (an *intent*), refine the requirements through a guided Q&A with the AI **Webagent**, generate the workflow specification and solution, and then deploy and test it.
+In this exercise, you will use Joule Studio to create an agentic invoice approval workflow powered by managed n8n. You will describe what you want in plain business language (an *intent*), refine the requirements through a guided Q&A with the AI **Webagent**, generate the workflow specification and solution, and then deploy and test it.
 
 > **New to Joule Studio or n8n? Start here.**
-> - **SAP Joule Studio** — SAP's environment for building, deploying, and managing AI-powered automations and agents.
-> - **SAP-managed n8n** — a visual, node-based workflow engine hosted and run by SAP. You build a process as a series of connected steps called *nodes*.
+> - **Joule Studio** — SAP's environment for building, deploying, and managing AI-powered automations and agents.
+> - **managed n8n** — a visual, node-based workflow engine hosted and run by SAP. You build a process as a series of connected steps called *nodes*.
 > - **Webagent** — the AI assistant that turns your plain-language *intent* into a working solution by asking you a few clarifying questions.
 > - **Solution** — the container for your work. It holds one or more **assets** (a workflow, an agent, or an MCP server) and is the unit you deploy. A solution can also be shared, committed to a GitHub repository, and transported to another Joule Studio tenant.
 > - **Intent** — a description of the business outcome you want, in everyday language — no technical terms required.
@@ -15,7 +15,7 @@ In this exercise, you will use SAP Joule Studio to create an agentic invoice app
 
 After completing these steps you will have built an invoice approval workflow that validates invoices, routes them to an AP Clerk for approval via SAP Task Center with email and Teams notifications, and returns the outcome.
 
-1. **Log on to SAP Joule Studio** in your browser (preferably Chrome) : 
+1. **Log on to Joule Studio** in your browser (preferably Chrome) : 
 https://747391938.eu10.sapdas.cloud.sap/new/
 with username <br>AD164-0XX  (XX to be replaced with the number as provided)  and the password as shared by your trainers.
 
@@ -35,7 +35,7 @@ with username <br>AD164-0XX  (XX to be replaced with the number as provided)  an
 
 6. The **Create n8n Workflow** dialog opens. **Enter your solution name** (e.g. `AD164-00`, replacing `00` with your user number), **paste the following intent into the Intent Statement field**, and **click Create**:
     ```
-    Please create a workflow. The workflow should...Receive Invoice header data as input, do basic validation and submit the invoice for an approval to an AP clerk. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice
+    Please create a workflow. The workflow should...Receive Invoice header data as input, do basic validation and submit the invoice for an approval to an AP clerk. AP Clerk receive Mail and Teams notifications. AP Clerk approve or reject the invoice.
     ```
 <br>![](images/Step6.png)
 > Your **intent** is simply the business outcome you want. The Webagent translates it into requirement and specification documents, then builds the solution for you — you don't need to write any technical detail here.
