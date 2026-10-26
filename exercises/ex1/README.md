@@ -144,7 +144,7 @@ After completing these steps you will have deployed your workflow and run it end
 13. The **Conversations** panel opens. **Click "+ New"** to start a new conversation with Joule.
 <br>![](images/Step35.png)
 
-14. The Joule Chat screen opens. **Type `List my tasks`** and **send it** to see pending approval tasks assigned to you in SAP Task Center.
+14. The Joule Chat screen opens. Remove **Agenting Thinking** mode and **Type `List my tasks`** and **send it** to see pending approval tasks assigned to you in SAP Task Center.
 <br>![](images/Step36.png)
 
 15. SAP Task Center returns your **Open Tasks** list (3 of 3) — all showing **Invoice Approval: INV-2026-0042**, Medium Priority, created recently. **Click "Select"** on the most recently created task to open it.
