@@ -61,7 +61,7 @@ After completing these steps you will have built and deployed an AI agent that v
 
 After completing these steps you will have run the end-to-end workflow, confirmed the AI agent's PO validation ran, and checked for the resulting task in SAP Task Center.
 
-1. In the **Manage** tab under **Try Deployed Solution**, **click `invoice-po-validation-agent`** to open the agent's test interface. In the input field, **type `5108022036/2026`** (an invoice number / fiscal year) and **send it** to test the agent standalone.
+1. In the **Manage** tab under **Try Deployed Solution**, **click `invoice-po-validation-agent`** to open the agent's test interface. In the input field, **type `5108417282/2026`** (an invoice number / fiscal year) and **send it** to test the agent standalone.
 <br>![](images/Step13.png)
 
 2. The agent responds with a structured **Supplier Invoice Details** report for invoice **5108417282** (fiscal year 2026): Header Information (Invoice Number, Fiscal Year, Supplier Invoice ID: DEMO-BLK-002, Company Code: 1010, Supplier: 10100088, Invoice Status: Posted, Approval Status: Workflow not yet started) and Financial Details (Gross Amount: 514.87 AED). *(Review only — this confirms the agent can query S/4HANA and return invoice data.)*
