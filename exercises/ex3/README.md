@@ -1,4 +1,4 @@
-# Exercise 3 - Build and Deploy an AP Invoice Payment Block Processing Agent
+# Exercise 3 - Build and Deploy an AP Invoice Payment Block Processing Workflow with Custom Agent
 
 In this exercise you build a complete **AP Invoice Payment Block Processing** solution from scratch. An AI agent performs a 3-way match — comparing a payment-blocked invoice against the related Purchase Order, Goods Receipt, and Purchasing Info Record in S/4HANA Public Cloud — and returns a structured recommendation. The recommendation triggers an n8n approval workflow that sends the analysis to an AP Clerk via SAP Task Center for a final approve or reject decision.
 
@@ -11,7 +11,7 @@ This exercise uses a different entry point: the unified **"What do you want to c
 
 > **Throughout this guide, the action you need to perform is shown in bold.** Steps marked *(Review only)* need no action — just look and move on.
 
-## Exercise 3.1 - Build the Agent
+## Exercise 3.1 - Build the Solution with Workflow and Agent
 
 After completing these steps you will have a fully built and ready-to-deploy solution.
 
@@ -20,7 +20,7 @@ After completing these steps you will have a fully built and ready-to-deploy sol
 
 2. The **"What do you want to create?"** dialog opens. In the chat input at the bottom, **paste the following intent and send it**:
     ```
-    Business users want to process invoices with payment block in S/4 HANA Public Cloud. A custom agent retrieve an invoice, compare with the related Purchase Order, Goods Receipt and Supplier contract. The response of the agent is triggering an approval workflow. The workflow enable an AP clerk to approve the invoice based on agent analysis.
+    Business users want to process invoices with payment block in S/4 HANA Public Cloud. A custom agent retrieve an invoice, compare with the related Purchase Order.The response of the agent is triggering an approval workflow. The workflow enable an AP clerk to approve the invoice based on agent analysis.
     ```
 <br>![](images/Step2.png)
 > The **Guided** mode is selected by default. It walks you through the solution design step by step, asking targeted questions to capture your requirements precisely.
