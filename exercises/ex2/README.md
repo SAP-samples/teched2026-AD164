@@ -64,13 +64,13 @@ After completing these steps you will have run the end-to-end workflow, confirme
 1. In the **Manage** tab under **Try Deployed Solution**, **click `invoice-po-validation-agent`** to open the agent's test interface. In the input field, **type `5108022036/2026`** (an invoice number / fiscal year) and **send it** to test the agent standalone.
 <br>![](images/Step13.png)
 
-2. The agent responds with a structured **Supplier Invoice Details** report for invoice **5108022036** (fiscal year 2026): Header Information (Invoice Number, Fiscal Year, Supplier Invoice ID: DEMO-BLK-002, Company Code: 1010, Supplier: 10100088, Invoice Status: Posted, Approval Status: Workflow not yet started) and Financial Details (Gross Amount: 514.87 AED). *(Review only — this confirms the agent can query S/4HANA and return invoice data.)*
+2. The agent responds with a structured **Supplier Invoice Details** report for invoice **5108417282** (fiscal year 2026): Header Information (Invoice Number, Fiscal Year, Supplier Invoice ID: DEMO-BLK-002, Company Code: 1010, Supplier: 10100088, Invoice Status: Posted, Approval Status: Workflow not yet started) and Financial Details (Gross Amount: 514.87 AED). *(Review only — this confirms the agent can query S/4HANA and return invoice data.)*
 <br>![](images/Step14.png)
 
 3. Now test the full end-to-end workflow. Under **Try Deployed Solution**, **click `invoice-approval-workflow`**. The Webagent tells you the workflow needs: Invoice Number, Invoice Date, Vendor, Amount, Currency, and Company Code. **Enter the following JSON** in the input field and **send it**:
     ```json
     {
-      "invoiceNumber": "5108022036",
+      "invoiceNumber": "5108417282",
       "vendor": "Acme Corp",
       "invoiceDate": "2026-10-23",
       "amount": 12500.00,
@@ -80,7 +80,7 @@ After completing these steps you will have run the end-to-end workflow, confirme
     ```
 <br>![](images/Step15.png)
 
-4. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number: 5108022036, Vendor: Acme Corp, Invoice Date: 2026-10-23, Amount: 12500, Currency: EUR, Company Code: 1000). **Type `Yes`** and **send it** to confirm.
+4. The Webagent shows a **summary table** of the invoice data to be submitted (Invoice Number: 5108417282, Vendor: Acme Corp, Invoice Date: 2026-10-23, Amount: 12500, Currency: EUR, Company Code: 1000). **Type `Yes`** and **send it** to confirm.
 <br>![](images/Step16.png)
 
 5. The Webagent confirms **"Great, triggering the workflow now!"** and shows an **Execute Workflow** button. **Click "Execute Workflow"** to run the extended invoice approval workflow.
