@@ -1,4 +1,5 @@
 # Session AD164 - Generate agentic workflows using Managed Service for n8n in Joule Studio
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AD164)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AD164)
 
 ## Description
 
